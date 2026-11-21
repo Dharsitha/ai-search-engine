@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MindRec - AI Recommendation Engine</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['Outfit', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#f5f1ff',
+              100: '#ece3fe',
+              200: '#dacafd',
+              300: '#c0a3fc',
+              400: '#a371f9',
+              500: '#8642f4',
+              600: '#703bf7',
+              700: '#611eed',
+              800: '#5117c7',
+              900: '#4315a2',
+              950: '#280a6b',
+            },
+            sidebar: {
+              bg: '#140c2e',
+              hover: '#221447',
+              active: '#3c2079',
+              text: '#a99fc2',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- React 18 & ReactDOM -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  
+  <!-- Babel Standalone for direct in-browser JSX execution -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <!-- App Custom Styles -->
+  <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body class="bg-[#f4f1fa] text-[#1e1338] min-h-screen">
+  <div id="root">
+    <!-- Initial Loading State -->
+    <div class="flex items-center justify-center min-h-screen bg-[#140c2e] text-white">
+      <div class="text-center space-y-4">
+        <div class="w-14 h-14 border-4 border-purple-500 border-t-transparent rounded-full animate-spin mx-auto"></div>
+        <div class="flex items-center justify-center gap-2">
+          <svg class="w-6 h-6 text-purple-400 animate-pulse" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+          </svg>
+          <span class="text-2xl font-bold tracking-tight text-white">MindRec</span>
+        </div>
+        <p class="text-purple-300 text-sm">Initializing AI Recommendation Engine...</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main React Application Script -->
+  <script type="text/babel" src="/static/js/app.jsx"></script>
+</body>
+</html>
